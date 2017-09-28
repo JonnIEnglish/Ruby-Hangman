@@ -16,3 +16,5 @@
 #[1,2,3].each {|number| puts number}
 
 puts("Welcome to HANGMAN! ")
+
+puts("Hello")
