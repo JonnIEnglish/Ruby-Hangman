@@ -31,3 +31,6 @@ print("Computer: The word is: ")
 word.length.times do
    print "_ "
 end
+
+print(player_2 + ", you may now try and guess a letter.")
+puts
