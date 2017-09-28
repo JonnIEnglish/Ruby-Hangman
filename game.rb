@@ -17,4 +17,3 @@
 
 puts("Welcome to HANGMAN! ")
 
-puts("Hello")
