@@ -32,5 +32,6 @@ word.length.times do
    print "_ "
 end
 
-print(player_2 + ", you may now try and guess a letter.")
-puts
+puts(" ")
+print(player_2 + ", you may now try and guess a letter: ")
+guessedWord = gets.chomp
