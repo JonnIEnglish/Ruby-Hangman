@@ -35,3 +35,7 @@ end
 puts(" ")
 print(player_2 + ", you may now try and guess a letter: ")
 guessedWord = gets.chomp
+
+listWord = word.split('')
+
+puts listWord
