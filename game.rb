@@ -17,8 +17,17 @@
 
 puts("Welcome to HANGMAN! ")
 
-player_1 = gets("Player 1 enter your name: ")
-player_2 = gets("Player 2 enter your name: ")
+print "Player 1 enter your name: "
+player_1 = gets.chomp
+print "Player 2 enter your name: "
+player_2 = gets.chomp
 
-puts("OK," + player_2 + " avvert your eyes. ") 
-word = gets(player_1 + " enter your word: ")
+puts("OK, " + player_2 + ", avert your eyes. ") 
+
+print(player_1 + " enter your word: ")
+word = gets.chomp
+
+print("Computer: The word is: ")
+word.length.times do
+   print "_ "
+end
