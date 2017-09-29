@@ -17,6 +17,8 @@
 
 puts("Welcome to HANGMAN! ")
 
+require 'io/console'
+
 print "Player 1 enter your name: "
 player_1 = gets.chomp
 print "Player 2 enter your name: "
@@ -24,8 +26,10 @@ player_2 = gets.chomp
 
 puts("OK, " + player_2 + ", avert your eyes. ") 
 
-print(player_1 + " enter your word: ")
-word = gets.chomp
+print(player_1 + ", enter your word: ")
+word = STDIN.noecho(&:gets).chomp
+
+puts(" ")
 
 print("Computer: The word is: ")
 word.length.times do
@@ -38,4 +42,4 @@ guessedWord = gets.chomp
 
 listWord = word.split('')
 
-puts listWord
+print listWord
