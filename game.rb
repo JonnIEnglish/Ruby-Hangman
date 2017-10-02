@@ -14,32 +14,44 @@
 #end
 
 #[1,2,3].each {|number| puts number}
+class Main
 
-puts("Welcome to HANGMAN! ")
+    def setup
+        puts("Welcome to HANGMAN! ")
+        require 'io/console'
 
-require 'io/console'
+        print "Player 1 enter your name: "
+        @player_1 = gets.chomp
+        print "Player 2 enter your name: "
+        @player_2 = gets.chomp
 
-print "Player 1 enter your name: "
-player_1 = gets.chomp
-print "Player 2 enter your name: "
-player_2 = gets.chomp
+        puts("OK, " + @player_2 + ", avert your eyes. ") 
 
-puts("OK, " + player_2 + ", avert your eyes. ") 
+        print(@player_1 + ", enter your word: ")
+        word = STDIN.noecho(&:gets).chomp
 
-print(player_1 + ", enter your word: ")
-word = STDIN.noecho(&:gets).chomp
+        puts(" ")
 
-puts(" ")
+        print("Computer: The word is: ")
+        word.length.times do
+           print "_ "
+        end
 
-print("Computer: The word is: ")
-word.length.times do
-   print "_ "
-end
+        puts(" ")
 
-puts(" ")
-print(player_2 + ", you may now try and guess a letter: ")
-guessedWord = gets.chomp
+    end
 
-listWord = word.split('')
+    def guess
+        print(@player_2 + ", you may now try and guess a letter: ")
+        guessedWord = gets.chomp
 
-print listWord
+        listWord = word.split('')
+
+        letters_guessed = []
+
+        letters_guessed.insert(0, guessedWord)
+        puts letters_guessed
+    end    
+end    
+
+Main.setup
